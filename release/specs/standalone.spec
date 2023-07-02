@@ -10,6 +10,7 @@ for tool in ["mitmproxy", "mitmdump", "mitmweb"]:
     a = Analysis(
         [tool],
         excludes=excludes,
+		hiddenimports=['Cryptodome']
     )
     pyz = PYZ(a.pure, a.zipped_data)
 
